@@ -9,14 +9,22 @@ sourceSets{
    }
 }
 
+application {
+    mainClassName = 'SimpleTest'
+}
+
 
 java{
    sourceCompatibility = JavaVersion.VERSION_1_8
    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
-application {
-    mainClassName = 'SimpleTest'
+repositories{
+   mavenCentral()
+}
+
+dependencies{
+   implementation 'org.apache.commons:commons-csv:1.8'
 }
 
 version = '1.0.0'
