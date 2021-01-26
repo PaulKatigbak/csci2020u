@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+
+java{
+   sourceCompatibility = JavaVersion.VERSION_1_8
+   targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+application {
+    mainClassName = 'SimpleTest'
+}
+
+version = '1.0.0'
+
+jar {
+   manifest {
+      attributes 'Main-Class': 'SimpleTest',
+                  'Implementation-Title': 'HelloWorld'
+   }
+}
