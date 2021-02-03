@@ -1,0 +1,64 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'nebula.lint'
+
+sourceSets{
+   main{
+      java{
+         srcDirs = ['src/main/java/csci2020u/lab03']
+      }
+   }
+}
+
+application {
+    mainClassName = 'CSVDemo'
+}
+
+
+java{
+   sourceCompatibility = JavaVersion.VERSION_1_8
+   targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories{
+   mavenCentral()
+}
+dependencies{
+   implementation 'org.apache.commons:commons-csv:1.8'
+}
+
+version = '1.0.0'
+
+jar {
+   manifest {
+      attributes 'Main-Class': 'SimpleTest',
+                  'Implementation-Title': 'HelloWorld',
+                  'version': version
+   }
+}
+
+buildscript {
+    repositories {
+        flatDir dirs: '/mnt/c/Users/PAUL/Desktop/Programming/University/SystemDev/csci2020u/proguard6.2.2/lib'
+    }
+    dependencies{
+        classpath ':proguard'
+    }
+}
+task (minify, dependsOn: 'jar', type: proguard.gradle.ProGuardTask){
+    configuration 'proguard.cfg'
+
+    injars '/mnt/c/Users/PAUL/Desktop/Programming/University/SystemDev/csci2020u/lab03/build/libs/lab03-1.0.0.jar'
+    outjars '/mnt/c/Users/PAUL/Desktop/Programming/University/SystemDev/csci2020u/lab03/build/libs/lab03-1.0.0_min.jar'
+}
+
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "com.netflix.nebula:gradle-lint-plugin:16.17.0"
+  }
+}
