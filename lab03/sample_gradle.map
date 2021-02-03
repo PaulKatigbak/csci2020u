@@ -1,0 +1,6 @@
+CSVDemo -> CSVDemo:
+    void <init>() -> <init>
+    void main(java.lang.String[]) -> main
+SimpleTest -> SimpleTest:
+    void <init>() -> <init>
+    void main(java.lang.String[]) -> main
