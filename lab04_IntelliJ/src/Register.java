@@ -3,21 +3,16 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class Register extends Application {
+    Button button1 = new Button();
+
     public static void main(String[] args) {
         launch(args);
     }
-
-    Button button1 = new Button();
 
     @Override
     public void start(Stage primaryStage) {
@@ -82,7 +77,7 @@ public class Register extends Application {
                 System.out.printf(
                         "Registration Validation!%n%nUsername: %s %nPassword: %s %nFull Name: %s %nEmail: %s %nPhone Number: %s %nDate of Birth: %s",
                         userInput.getText(), passInput.getText(), fullNameInput.getText(), mailInput.getText(),
-                        checkPhone(phoneInput),birthInput.getValue());
+                        checkPhone(phoneInput), birthInput.getValue());
             }
         });
         GridPane.setConstraints(button1, 0, 6);
@@ -91,7 +86,7 @@ public class Register extends Application {
         primaryStage.setScene(mainScene);
         primaryStage.show();
         grid.getChildren().addAll(userLabel, userInput, passLabel, passInput, fullNameLabel, fullNameInput, phoneLabel,
-                mailLabel, mailInput, phoneInput,birthLabel,birthInput, button1);
+                mailLabel, mailInput, phoneInput, birthLabel, birthInput, button1);
     }
 
     public String checkPhone(TextField input) {
