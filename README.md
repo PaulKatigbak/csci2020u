@@ -7,3 +7,5 @@ Lab 02 - Completed
 Lab 03 - Completed with Challenge
 
 Lab 04 - Completed (Made with two editors)
+
+Lab 05 - Completed with Challenge
