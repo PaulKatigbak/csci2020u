@@ -13,3 +13,5 @@ Lab 05 - Completed with Challenge
 Lab 06 - Completed
 
 Lab 07 - Completed
+
+Lab 08 - Completed
