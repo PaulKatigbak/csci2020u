@@ -1,0 +1,11 @@
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="lab09.Controller">
+
+    <center>
+        <Canvas fx:id="canvas" width="800" height="600"/>
+    </center>
+</BorderPane>
