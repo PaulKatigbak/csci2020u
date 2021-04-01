@@ -15,3 +15,5 @@ Lab 06 - Completed
 Lab 07 - Completed
 
 Lab 08 - Completed
+
+Lab 09 - Completed
